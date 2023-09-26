@@ -55,10 +55,6 @@ RegisterNetEvent('serrulata-dumpster:client:search', function(data)
     end
 end)
 
-RegisterNetEvent('serrulata-dumpster:client:looted', function(data)
-    QBCore.Functions.Notify('This Dumpster Has Recently been looted', 'error', 5000)
-end)
-
 function AnimationRun()
     TriggerEvent('animations:client:EmoteCommandStart', {"mechanic2"})
     local heading = GetEntityHeading(closestBINObject)
@@ -73,7 +69,6 @@ RegisterNetEvent('serrulata-dumpster:client:diving', function(isCoolDown)
     exports['ps-ui']:Circle(function(success)
         if success then
             AnimationRun()
-            --Wait(3000)
             TriggerServerEvent('serrulata-dumpster:server:reward')
         else
             -- add a Debuff if you want or a punishment for failing the minigame

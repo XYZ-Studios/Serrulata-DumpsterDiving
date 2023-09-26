@@ -23,7 +23,7 @@ RegisterServerEvent('serrulata-dumpster:server:dive', function(binObjectNetId)
         TriggerClientEvent('serrulata-dumpster:client:diving', src, binObjectNetId)
     else
         if CoolDown[objecid] then
-            TriggerEvent('serrulata-dumpster:client:looted')
+            
         else
             print('[^2Serrulata Dumpster ^7] Bin with ID ' .. objecid .. ' is already in the table.')
         end
@@ -73,10 +73,10 @@ AddEventHandler('onResourceStart', function(resource)
     if resource == GetCurrentResourceName() then
        print('[^2Serrulata Dumpster^7] Started ^2Successfully^7')
     end
- end)
+end)
  
- AddEventHandler('onResourceStop', function(resource)
+AddEventHandler('onResourceStop', function(resource)
     if resource == GetCurrentResourceName() then
          print('[^2Serrulata Dumpster^7] Stopped ^2Successfully^7')
     end
- end)
+end)
