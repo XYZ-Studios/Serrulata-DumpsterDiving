@@ -16,7 +16,7 @@ ensure Serrulata-DumpsterDiving
 
 # **Shared/Config.lua**
 
-![Serrulata](https://i.imgur.com/i7FkZJt.png)
+![Serrulata](https://i.imgur.com/spK3sUU.png)
 
 
 # **Dependencies**
