@@ -61,6 +61,8 @@ end)
 
 function AnimationRun()
     TriggerEvent('animations:client:EmoteCommandStart', {"mechanic2"})
+    local heading = GetEntityHeading(closestBINObject)
+    SetEntityHeading(PlayerPedId(), heading-120)
     Wait(3000)
     TriggerEvent('animations:client:EmoteCommandStart', {"c"})
 end
