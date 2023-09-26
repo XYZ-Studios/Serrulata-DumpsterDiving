@@ -25,8 +25,7 @@ ensure Serrulata-DumpsterDiving
 
 
 # Preview old version
-[Serrulata-DumpsterDiving] - WIP, Self explanatory. You dive in dumpsters.
-
+[Serrulata-DumpsterDiving](https://youtu.be/obIHQCqpTvE)
 # **Discord**
 [![](https://dcbadge.vercel.app/api/server/NerdvuJDX7)](https://discord.gg/NerdvuJDX7)
 
