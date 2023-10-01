@@ -59,11 +59,32 @@ end)
 RegisterNetEvent("serrulata-dumpster:server:reward",function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
-    for _ = 1, math.random(1, Config.MaxItemsReceived), 1 do
-        local randItem = Config.ItemTable[math.random(1, #Config.ItemTable)]
-        local amount = math.random(Config.MinItemReceivedQty, Config.MaxItemReceivedQty)
-        Player.Functions.AddItem(randItem, amount)
-        TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[randItem], 'add')
+    if Config.RarityReward == true then
+        local random = math.random(1000)
+        if random >= 1 and random <= 600 then -- 60% (Dumpster Common)
+            local randItem1 = Config.DumpsterCommon[math.random(1, #Config.DumpsterCommon)]
+            Player.Functions.AddItem(randItem1, 1)
+            TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[randItem1], 'add')
+        elseif random >= 601 and random <= 987 then -- 38.6% (Dumpster Trash)
+            local randItem2 = Config.DumpsterTrash[math.random(1, #Config.DumpsterTrash)]
+            Player.Functions.AddItem(randItem2, 1)
+            TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[randItem2], 'add')
+        elseif random >= 988 and random <= 998 then -- 1.0% (Dumpster Rare)
+            local randItem3 = Config.DumpsterRare[math.random(1, #Config.DumpsterRare)]
+            Player.Functions.AddItem(randItem3, 1)
+            TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[randItem3], 'add')
+        elseif random >= 999 and random <= 1000 then -- 0.1% (Dumpster Unique)
+            local randItem4 = Config.DumpsterUnique[math.random(1, #Config.DumpsterUnique)]
+            Player.Functions.AddItem(randItem4, 1)
+            TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[randItem4], 'add')
+        end
+    else
+        for _ = 1, math.random(1, Config.MaxItemsReceived), 1 do
+            local randItem = Config.ItemTable[math.random(1, #Config.ItemTable)]
+            local amount = math.random(Config.MinItemReceivedQty, Config.MaxItemReceivedQty)
+            Player.Functions.AddItem(randItem, amount)
+            TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[randItem], 'add')
+        end
     end
 end)
 

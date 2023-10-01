@@ -1,6 +1,41 @@
 Config = Config or {}
 
-Config.ItemTable = { -- These are the items that can be optained from the robbery
+Config.RarityReward = true -- If True it will give rewards with a rarity other then just random Rewards. (Rarity is changed in server/main.lua)
+
+Config.DumpsterCommon = { -- These are the items that can be optained from the Dumpster if RarityReward = True (Base Odds = 60%) (Rarity is changed in server/main.lua)
+    [1] = "antique_coin1", 
+    [2] = "nails",
+    [3] = "barbed_wire",
+    [4] = "pandora_charm",
+    [5] = "fishingbait",
+    [6] = "nuts_bolts",
+    [7] = "metalscrap",
+}
+
+Config.DumpsterTrash = { -- These are the items that can be optained from the Dumpster if RarityReward = True (Base Odds = 38.6%) (Rarity is changed in server/main.lua)
+    [1] = "can",
+    [2] = "penny",
+    [3] = "seaweed",
+}
+
+Config.DumpsterRare = { -- These are the items that can be optained from the Dumpster if RarityReward = True (Base Odds = 1%) (Rarity is changed in server/main.lua)
+    [1] = "weapon_kitchen",
+    [2] = "weapon_flashlight",
+    [3] = "weapon_machete",
+    [4] = "pistol_ammo",
+}
+
+Config.DumpsterUnique = { -- These are the items that can be optained from the Dumpster if RarityReward = True (Base Odds = 0.1%) (Rarity is changed in server/main.lua)
+    [1] = "weapon_nambu",
+    [2] = "weapon_zkiller",
+    [3] = "ap_watch",
+    [4] = "bmx",
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Config.ItemTable = { -- These are the items that can be optained from the Dumpster if RarityReward = False
 	[1] = "phone",
 	[2] = "water_bottle",
 	[3] = "plastic",
